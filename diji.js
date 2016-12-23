@@ -7,6 +7,7 @@ getValue = function(input)
 		case 'V':return 3;
 		case 'W':return 4;
 		case 'X':return 5;
+		default:return -1;
 	}
 }
 getChar = function(input){
@@ -184,9 +185,13 @@ init = function(){
 }
 function find(val){
 	init();
-	var source = getValue(document.getElementById('from').value);
-	var destination = getValue(document.getElementById('to').value);
-	
+	var source = getValue(document.getElementById('from_before').value);
+	var destination = getValue(document.getElementById('to_before').value);
+	if(source == -1)
+	{
+		var source = getValue(document.getElementById('from_after').value);
+		var destination = getValue(document.getElementById('to_after').value);
+	}	
 	arr[0]=source;
 	findpaths(source,destination,e_dist);
 	show(val);
@@ -195,20 +200,18 @@ function find(val){
 
 function onscrollFun(){
 	console.log(document.body.scrollTop);
-	if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-        document.getElementById("searchbox1").style.position = "fixed";
-		document.getElementById("searchbox1").style.width="100%";
-		document.getElementById("searchbox1").style.left="0";
-		var els = document.getElementsByClassName('scroll');
-		for(i=0, len = els.length;i<len;i++)
-			els[i].style.width="20%";
-    } else {
-        document.getElementById("searchbox1").style.position = "relative";
-		document.getElementById("searchbox1").style.width="50%";
-		document.getElementById("searchbox1").style.left="30%";
+	var els = document.getElementsByClassName('scroll');
 		
-		var els = document.getElementsByClassName('scroll');
-		for(i=0, len = els.length;i<len;i++)
-			els[i].style.width="45%";
-    }
+	if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) 
+	{
+    	document.getElementById("after_scroll").style.display="block";
+		document.getElementById("before_scroll").style.display="none";
+		
+	}
+	else 
+	{
+        
+		document.getElementById("before_scroll").style.display="block";		
+		document.getElementById("after_scroll").style.display="none";
+	}
 }

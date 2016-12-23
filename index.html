@@ -9,19 +9,32 @@
 			<h1 style="text-align:center;">CK-12 Metro Map</h1>
 		</div>
 		<div class="container width100" >
+				<div id="after_scroll" class="more-z-index width100" style="position:fixed; top:0;background-color:white;display:none;">
+					<center>
+						<div  id="searchbox1" style="">	
+							<h4>CK-12 Metro Map</h4>							<input id = 'from_after' type="text" placeholder="From" class="scroll searchbox width20"/>
+							<input id = 'to_after' type="text" placeholder="To" class="scroll searchbox width20"/>
+							<input type="button" class="button button-small search scroll" value="Find Shortest Path" onclick="find(0)"/>
+							<input type="button" class="button button-small search scroll" value="Find Quickest Path" onclick="find(1)"/>
+							<div class="heading" ><h3 style="text-align:center">Results:<h3></div>
+						</div>
+					</center>
+				</div>
+				<div id="before_scroll" class="more-z-index width100">
+					<center>
+						<div  id="searchbox1" style="position:relative; top:0;background-color:white">	
+							<input id = 'from_before' type="text" placeholder="From" class="scroll searchbox width20"/>
+							<input id = 'to_before' type="text" placeholder="To" class="scroll searchbox width20"/></br>
+							<input type="button" class="button button-small search scroll" value="Find Shortest Path" onclick="find(0)"/>
+							<input type="button" class="button button-small search scroll" value="Find Quickest Path" onclick="find(1)"/>
+							<div class="heading" ><h3 style="text-align:center">Results:<h3></div>
+						</div>
+					</center>
+				</div>
 				
-					<div  class=" width50" id="searchbox1" style="position:relative; top:0;left:30%;background-color:white">	
-						<input id = 'from' type="text" placeholder="From" class="scroll searchbox width50"/>
-						<input id = 'to' type="text" placeholder="To" class="scroll searchbox width50"/>
-						<input type="button" class="button button-large search scroll" value="Find Shortest Path" onclick="find(0)"/>
-						<input type="button" class="button button-large search scroll" value="Find Quickest Path" onclick="find(1)"/>
-					<div class="heading" ><h3 style="text-align:center">Results:<h3></div>
-					</div>
-				
-				</br>
-				<div class="autoscroll">
-					<div id = "res" class = "width50" style=""></div>
-					<div class="graph" id="my_path" style=""></div>
+				<div class="width100 autoscroll">
+					<div id = "res" class = "result width75 fl-left"></div>
+					<div class="graph" id="my_path" style=""><img src="Capture.png" height="100%" width="100%"/></div>
 			</div>
 		</div>
 		

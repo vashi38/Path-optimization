@@ -10,17 +10,36 @@
     border-bottom-right-radius: 10px;
 	float:left;
 	background-color:white;
-	
+	transition:2s display;
+}
+.more-z-index{
+	z-index:10;
+	transition:2s width;
 }
 .width100{
-	width:95%
+	width:95%;
+	transition:2s width;
 }
 .width50{
 	width:45%;
+	transition:2s width;
+}
+.width75{
+	width:80%;
+	transition:2s width;
+}
+.fl-left{
+	float:left;
+	transition:2s width;
+}
+.width20{
+	width:25%;
+	transition:2s width;
 }
 .searchbox-fix{
 	position:fixed;
 	top:0;
+	transition:2s width;
 }
 
 .button{
@@ -69,7 +88,7 @@ h2{
 }
 hr{
 	float: left;
-	margin-top:6%;
+	margin-top:4%;
 	width:10%;
 	border:solid;
 	border-width:3px;
@@ -84,8 +103,8 @@ hr{
 	width:15%;
 }
 .autoscroll{
-
-	
+position:relative;
+height:44%;
 }
 h3{
 	display: block;
@@ -94,15 +113,19 @@ h3{
 .width25{
 	width:25%;
 }
+.result{
+	z-index:0;
+}
 .graph{
-	width:40%;
-	height:44%;
-	position:fixed;
-	right:50;
-	bottom:0;
+	padding-top:15px;
+	width:20%;
 	border:solid;
 	border-width:1px;
 	border-radius: 10px 10px 10px 10px;
 	border-color:black;
 	float:right;
+	position:fixed;
+	height:40%;
+	right:50;
+	transition:2s display position;
 }
