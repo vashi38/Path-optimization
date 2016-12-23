@@ -1,0 +1,33 @@
+<html>
+	<head>
+	</head>
+	<link rel="stylesheet" href="app.css"/>
+	<script type="text/javascript" src="diji.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<body onscroll="onscrollFun()">
+		<div class="container width100">
+			<h1 style="text-align:center;">CK-12 Metro Map</h1>
+		</div>
+		<div class="container width100" >
+				
+					<div  class=" width50" id="searchbox1" style="position:relative; top:0;left:30%;background-color:white">	
+						<input id = 'from' type="text" placeholder="From" class="scroll searchbox width50"/>
+						<input id = 'to' type="text" placeholder="To" class="scroll searchbox width50"/>
+						<input type="button" class="button button-large search scroll" value="Find Shortest Path" onclick="find(0)"/>
+						<input type="button" class="button button-large search scroll" value="Find Quickest Path" onclick="find(1)"/>
+					<div class="heading" ><h3 style="text-align:center">Results:<h3></div>
+					</div>
+				
+				</br>
+				<div class="autoscroll">
+					<div id = "res" class = "width50" style=""></div>
+					<div class="graph" id="my_path" style=""></div>
+			</div>
+		</div>
+		
+			
+
+				
+		
+	</body>
+</html>
